@@ -18,7 +18,7 @@ export default function Token() {
     redirect: 'follow'
   };
 
-  fetch("http://localhost:5000/api/auth/login", requestOptions)
+  fetch("https://backend-ye4v.onrender.com/api/auth/login", requestOptions)
     .then((response) => response.json())
     .then((data) => setResult(data.token))
     .catch((error) => console.log("error", error));

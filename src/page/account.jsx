@@ -19,7 +19,7 @@ export default function Account() {
       if (!token) return;
       try {
         const response = await fetch(
-          "http://localhost:5000/api/auth/check-admin",
+          "https://backend-ye4v.onrender.com//api/auth/check-admin",
           {
             method: "GET",
             headers: {

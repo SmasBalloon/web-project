@@ -13,7 +13,7 @@ export default defineConfig({
     port: 5173, // Port du frontend
     proxy: {
       "/api": {
-        target: "http://localhost:5000", // URL de ton backend
+        target: "https://backend-ye4v.onrender.com/", // URL de ton backend
         changeOrigin: true,
         secure: false,
       },
