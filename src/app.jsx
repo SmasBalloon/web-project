@@ -4,6 +4,8 @@ import RegisterPage from "./page/RegisterPage";
 import Token from "./page/token"
 import Index from "./page/index"
 import Account from "./page/account"
+import AdminRoute from "./page/AdminRoute";
+
 function App() {
   return (
     <Router>
@@ -13,6 +15,11 @@ function App() {
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/admin/token" element={<Token />} />
         <Route path="/admin/account" element={< Account/>} />
+        <Route path="/admin/account" element={
+              <AdminRoute>
+                  <Account/>
+              </AdminRoute>
+          }/>
       </Routes>
     </Router>
   );

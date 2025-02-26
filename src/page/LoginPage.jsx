@@ -14,9 +14,8 @@ export default function LoginPage() {
     const token = localStorage.getItem("token");
     if (token) {
       setIsLoggedIn(true);
-      navigate("/admin/account");
     }
-  }, [navigate]);
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,8 +39,6 @@ export default function LoginPage() {
       setSuccess("Connexion réussie !");
       setIsLoggedIn(true);
       localStorage.setItem("token", data.token);
-      // Rediriger vers la page admin/account après une connexion réussie
-      navigate("/admin/account");
     } catch (err) {
       setError(err.message);
       setIsLoggedIn(false);
